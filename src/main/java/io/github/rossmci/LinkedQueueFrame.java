@@ -179,16 +179,16 @@ public class LinkedQueueFrame extends javax.swing.JFrame
     private void Q1jToggleButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Q1jToggleButtonActionPerformed
     {//GEN-HEADEREND:event_Q1jToggleButtonActionPerformed
 
-		mergingTwoSortedQueues.first.append(inputjTextField.getText());
-		inputjTextField.setText("");
-		System.out.println("1"+queue1);
+//		mergingTwoSortedQueues.first.append(inputjTextField.getText());
+//		inputjTextField.setText("");
+//		System.out.println("1"+queue1);
     }//GEN-LAST:event_Q1jToggleButtonActionPerformed
 
     private void Q2jToggleButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Q2jToggleButtonActionPerformed
     {//GEN-HEADEREND:event_Q2jToggleButtonActionPerformed
-		queue2.add(inputjTextField.getText());
-		System.out.println("2"+queue2);
-		inputjTextField.setText("");
+//		queue2.add(inputjTextField.getText());
+//		System.out.println("2"+queue2);
+//		inputjTextField.setText("");
     }//GEN-LAST:event_Q2jToggleButtonActionPerformed
 
     private void Q3jToggleButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Q3jToggleButtonActionPerformed
