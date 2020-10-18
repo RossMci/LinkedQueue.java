@@ -5,8 +5,6 @@
  */
 package io.github.rossmci;
 
-import java.util.PriorityQueue;
-import java.util.Queue;
 
 /**
  *
@@ -14,9 +12,9 @@ import java.util.Queue;
  */
 public class LinkedQueueFrame extends javax.swing.JFrame
 {
-
-	Queue queue1 = new PriorityQueue<String>();
-	Queue queue2 = new PriorityQueue<String>();
+ 
+	MergingTwoSortedQueues mergingTwoSortedQueues;
+	private Queue first= new LinkedQueue();
 
 	/**
 	 * Creates new form linkedQueuesjframe
@@ -25,12 +23,6 @@ public class LinkedQueueFrame extends javax.swing.JFrame
 	{
 		initComponents();
 	}
-	
-	public String merge(){
-	//	Queue result = MergingTwoSortedQueues.merge(queue1 , queue2);
-		return"";
-	}
-
 	/**
 	 * This method is called from within the constructor to initialize the form.
 	 * WARNING: Do NOT modify this code. The content of this method is always
@@ -187,7 +179,7 @@ public class LinkedQueueFrame extends javax.swing.JFrame
     private void Q1jToggleButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Q1jToggleButtonActionPerformed
     {//GEN-HEADEREND:event_Q1jToggleButtonActionPerformed
 
-		queue1.add(inputjTextField.getText());
+		mergingTwoSortedQueues.first.append(inputjTextField.getText());
 		inputjTextField.setText("");
 		System.out.println("1"+queue1);
     }//GEN-LAST:event_Q1jToggleButtonActionPerformed
