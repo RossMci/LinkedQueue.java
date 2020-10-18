@@ -29,16 +29,16 @@ class MergingTwoSortedQueues
 		Queue first = new LinkedQueue();
 		Queue second = new LinkedQueue();
 
-		first.append("a");
-		first.append("b");
-		first.append("g");
-		first.append("h");
-
-		second.append("A");
-		second.append("c");
-		second.append("d");
-		second.append("e");
-		second.append("f");
+//		first.append("a");
+//		first.append("b");
+//		first.append("g");
+//		first.append("h");
+//
+//		second.append("A");
+//		second.append("c");
+//		second.append("d");
+//		second.append("e");
+//		second.append("f");
 
 		String output =("First queue: ")+(first.toString())+("\nSecond queue: ")+(second.toString());
 
