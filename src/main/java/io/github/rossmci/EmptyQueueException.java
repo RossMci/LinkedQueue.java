@@ -9,11 +9,11 @@ package io.github.rossmci;
  *
  * @author Ross Mcinerney
  */
-public class QueueException extends RuntimeException
+public class EmptyQueueException extends RuntimeException
 {
-//  public QueueEmptyException(String err)
-//	{
-//		super(err);
-//	}
+  public EmptyQueueException()
+	{
+		super("Queue is empty.");
+	}
 
 }

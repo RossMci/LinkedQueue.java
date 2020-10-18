@@ -20,56 +20,51 @@ package io.github.rossmci;
  *
  *****************************************************************************
  */
-import java.util.PriorityQueue;
-import java.util.Queue;
 
 class MergingTwoSortedQueues
 {
 
 	public static void main(String[] args)
 	{
-		Queue<String> first = new PriorityQueue<>();
-		Queue<String> second = new PriorityQueue<>();
+		Queue first = new LinkedQueue();
+		Queue second = new LinkedQueue();
 
-		first.add("a");
-		first.add("b");
-		first.add("g");
-		first.add("h");
+		first.append("a");
+		first.append("b");
+		first.append("g");
+		first.append("h");
 
-		second.add("A");
-		second.add("c");
-		second.add("d");
-		second.add("e");
-		second.add("f");
+		second.append("A");
+		second.append("c");
+		second.append("d");
+		second.append("e");
+		second.append("f");
 
-		System.out.println("First queue: ");
-		System.out.println(first.toString());
-		System.out.println("\nSecond queue: ");
-		System.out.println(second.toString());
+		String output =("First queue: ")+(first.toString())+("\nSecond queue: ")+(second.toString());
 
 		Queue result = MergingTwoSortedQueues.merge(first, second);
 
-		System.out.println("\nMerged queue: ");
-		System.out.println(result.toString());
+		output +=("\nMerged queue: ")+ (result.toString());
+		System.out.println(output);
 	}
 
-	public static Queue<String> merge(Queue<String> first, Queue<String> second)
+	public static Queue merge(Queue first, Queue second)
 	{
-		Queue<String> mergedQueue = new PriorityQueue<>();
+		Queue mergedQueue = new LinkedQueue();
 
 		// If both queues are not empty.
 		while (!first.isEmpty() && !second.isEmpty())
 		{
-			String left = first.peek();
-			String right = second.peek();
+			String left = first.peek().toString();
+			String right = second.peek().toString();
 
 			if (left.compareTo(right) < 0)
 			{
-				mergedQueue.add(first.poll());
+				mergedQueue.append(first.serve());
 			}
 			else
 			{
-				mergedQueue.add(second.poll());
+				mergedQueue.append(second.serve());
 			}
 		}
 
@@ -79,12 +74,12 @@ class MergingTwoSortedQueues
 		return mergedQueue;
 	}
 
-	public static void emptyQueueInto(Queue<String> sourceQueue, Queue<String> destinationQueue)
+	public static void emptyQueueInto(Queue sourceQueue, Queue destinationQueue)
 	{
 		// If there are remaining items in one of the queue.
 		while (!sourceQueue.isEmpty())
 		{
-			destinationQueue.add(sourceQueue.poll());
+			destinationQueue.append(sourceQueue.serve());
 		}
 	}
 }

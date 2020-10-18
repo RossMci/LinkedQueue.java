@@ -12,20 +12,20 @@ package io.github.rossmci;
 public class Node
 {
 	private Node next;
-	private String element;
+	private Object element;
 
 	public Node()
 	{
 		this(null, null);
 	}
 
-	public Node(String e, Node n)
+	public Node(Object e, Node n)
 	{
 		element = e;
 		next = n;
 	}
 
-	public void setElement(String newElem)
+	public void setElement(Object newElem)
 	{
 		element = newElem;
 	}
@@ -35,7 +35,7 @@ public class Node
 		next = newNext;
 	}
 	
-	  public String getElement( ) 
+	  public Object getElement( ) 
   { 	return element; 		}
 
 	  public Node getNext( ) 
